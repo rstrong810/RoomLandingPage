@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --medium-gray: hsl(0, 0%, 63%);
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 27%);
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Spartan', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    color: var(--black);
+}
+
+p {
+    color: var(--medium-gray);
+    line-height: 1.6;
+}
+
+.hide {
+    display: none !important;
+}
+
+/* |||| Layout |||| */
+#inner-container {
+    width: 100%;
+    min-width: 300px;
+}
+
+#hamburger-bar {
+    cursor: pointer;
+}
+
+#hero {
+    background: url("./images/mobile-image-hero-1.jpg") no-repeat;
+    background-size: 100% 100%;
+    min-height: 300px;
+    position: relative;
+}
+
+#logo-image {
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    padding: 2.2em 1em;
+}
+
+.nav-list-container {
+    position: absolute;
+    display: block;
+    right: 0;
+    left: 0;
+    top: 0;
+    background-color: white;
+}
+
+.nav-list-container li {
+    display: inline-flex;
+    padding: 2em 1em;
+    list-style: none;
+    color: black;
+}
+
+#close-nav {
+    cursor: pointer;
+    margin-right: 2em;
+}
+
+#scroll-image-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: black;
+    cursor: pointer;
+}
+
+.scroll-image-arrow {
+    padding: 0.7em 1.3em;
+    vertical-align: middle;
+}
+
+.scroll-image-arrow:hover {
+    background: var(--dark-gray);
+}
+
+.content {
+    padding: 4em 2em 4em 2em;
+}
+
+.content h4 {
+    letter-spacing: 0.2em;
+}
+
+.content p {
+    margin-top: 1em;
+}
+
+.shop-now-flex {
+    display: flex;
+    margin-top: 3em;
+}
+
+.shop-now-heading {
+    font-weight: 500;
+    letter-spacing: 0.5em;
+    margin-right: 2.5em;
+}
+
+.content-image img{
+    width: 100%;
+    min-height: 220px;
+    height: 100%;
+}
+
+/* |||| Media Queries |||| */
+@media (max-width: 450px) {
+    .nav-list-container li {
+        display: block;
+        padding: 1em;
+    }
+}
+
+@media (min-width: 1000px) {
+    #hamburger-bar {
+        display: none;
+    }
+
+    #close-nav {
+        display: none;
+    }
+
+    #logo-image {
+        margin: 0;
+        padding-right: 2em;
+        max-height: 14px;
+        align-self: center;
+    }
+
+    nav {
+        display: flex;
+        padding-left: 4em;
+    }
+
+    .nav-list-container {
+        all: unset;
+        display: flex;
+    }
+
+    .nav-list-container li {
+        display: block;
+        color: white;
+    }
+
+    .grid-1 {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        min-height: 60vh;
+    }
+
+    .grid-2 {
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        min-height: 40vh;
+    }
+
+    .content {
+        align-self: center;
+        justify-self: center;
+        padding: 4em;
+    }
+
+    .content h1 {
+        font-size: 2.5em;
+    }
+
+    .scroll-image-arrow {
+        padding: 1em 1.7em;
+    }
+
+    #scroll-image-container {
+        right: -141px;
+    }
+}
